@@ -39,6 +39,16 @@ public class TodayController {
 		return "UserSuccess";
 	}
 	
+	@RequestMapping("/BoardDaySearch")
+	public String BoardDaySearch() {
+		return "BoardDaySearch";
+	}
+	
+	@RequestMapping("/BoardDayThema")
+	public String BoardDayThema() {
+		return "BoardDayThema";
+	}
+	
 	
 //	@RequestMapping("/regist")
 //	public String regist(TodayMember dto) {
