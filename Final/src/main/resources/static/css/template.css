@@ -895,7 +895,7 @@ progress { vertical-align: baseline; }
  .accordset .accordset-a { width: 2.4rem; height: 2.4rem; } 
  }
  
-.cafeinfo_img{width: 70vh; height: auto; position: absolute; top: 150px; left: 50px;}
-.cafeinfo_text{position: absolute; right: 35%; top: 33%; width: 350px; height: 300px;}
+.cafeinfo_img{width: 70vh; height: auto; position: absolute; top: 150px; left: 200px;}
+.cafeinfo_text{position: absolute; right: 25%; top: 33%; width: 350px; height: 300px;}
 .cafeinfo_ul{display: -webkit-box;}
 .cafeinfo_li{margin-right : 30px; -webkit-text-stroke: thin;}
