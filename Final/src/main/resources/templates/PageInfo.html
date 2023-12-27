@@ -373,12 +373,18 @@
 	         		<div>
 	         			<p>블루베이글은 직접 굽는 베이글에 제철과일이 올라가는 가게입니다.</p>
 	         		</div>
-  			        <div>
+	         		<br>
+  			        <div class="cafeinfo_text2">
   			        	<h3>블루베이글</h3>
-  			        	<p>블루베이글은 직접 굽는 베이글에 제철과일이 올라가는 가게입니다.</p>
+  			        	<p class="cafeinfo_p">블루베이글은 직접 굽는 베이글에 제철과일이 올라가는 가게입니다.</p>
 	         		</div>
-	         		<div class="star-ratings-fill space-x-2 text-lg" :style="{ width: ratingToPercent + '%' }">
-						<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+	         		<br>
+	         		<div class="cafeinfo_text2">
+	         			<h3>블루베이글</h3>
+						<span class="cafeinfo_p">★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+					</div>
+					<div class="cafeinfo_text3">
+						<p class="cafeinfo_button">리뷰작성</p>
 					</div>
          		</div>
       </div>
@@ -414,8 +420,8 @@
       <div class="contents-inner">
         <div class="contents-container container-md">
           <div class="textset">
-            <p class="textset-name">인사말</p>
-            <h2 class="textset-tit"> 여유로운 시간을 보내며 <br> 자신과 자연과의 대화를 즐기는 템하 </h2>
+<!--             <p class="textset-name">업체정보</p> -->
+            <h2 class="textset-tit"> 업체정보 </h2>
           </div>
         </div>
       </div>
@@ -427,30 +433,37 @@
         <div class="contents-container container-md">
           <ul class="contents-list">
             <li class="contents-item">
-              <div class="contents-icon">
-                <img class="contents-img" src="/icons/ico_map_white.svg" alt="맵 아이콘">
-              </div>
-              <div class="contents-info">
-                <p class="contents-text"> 서울시 영등포구 선유로70 우리벤처타운2 (문래동3가) 705호 </p>
-              </div>
+            <div id="daumRoughmapContainer1690352447500" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+<!--               <div class="contents-icon"> -->
+<!--                 <img class="contents-img" src="/icons/ico_map_white.svg" alt="맵 아이콘"> -->
+<!--               </div> -->
+<!--               <div class="contents-info"> -->
+<!--                 <p class="contents-text"> 서울시 영등포구 선유로70 우리벤처타운2 (문래동3가) 705호 </p> -->
+<!--               </div> -->
             </li>
             <li class="contents-item">
-              <div class="contents-icon">
-                <img class="contents-img" src="/icons/ico_tel_white.svg" alt="전화 아이콘">
-              </div>
+<!--               <div class="contents-icon"> -->
+<!--                 <img class="contents-img" src="/icons/ico_tel_white.svg" alt="전화 아이콘"> -->
+<!--               </div> -->
               <div class="contents-info">
                 <p class="contents-text">
-                  <strong>대표전화</strong> 070-8872-8874
+                  <strong>주소</strong> 제주도 서귀포시
                 </p>
                 <p class="contents-text">
-                  <strong>팩스전화</strong> 070-8872-8884
+                  <strong>영업시간</strong> 10:00 ~ 19:00
                 </p>
+                <p class="contents-text">
+                  <strong>휴무일</strong> 월요일
+                </p>
+                <p class="contents-text">
+                  <strong>전화번호</strong> 070-8872-8884
+                </p>                                
               </div>
             </li>
           </ul>
           <!-- * 카카오맵 - 지도퍼가기 -->
           <!-- 1. 지도 노드 -->
-          <div id="daumRoughmapContainer1690352447500" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+<!--           <div id="daumRoughmapContainer1690352447500" class="root_daum_roughmap root_daum_roughmap_landing"></div> -->
           <!--
         2. 설치 스크립트
         * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
