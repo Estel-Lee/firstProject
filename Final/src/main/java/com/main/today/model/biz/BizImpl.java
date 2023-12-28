@@ -9,17 +9,12 @@ import com.main.today.model.mapper.Mapper;
 @Service
 public class BizImpl implements Biz{
 
-//	@Autowired
-//	private Mapper mapper;
-//	
-//	@Override
-//	public int insertRegist(TodayMember dto) {
-//		return mapper.insertRegist(dto);
-//	}
-//
-//	@Override
-//	public TodayMember checkId(TodayMember dto) {
-//		return mapper.checkId(dto);
-//	}
+	@Autowired
+	private Mapper mapper;
+
+	@Override
+	public String checkId(TodayMember dto) {
+		return mapper.checkId(dto);
+	}
 
 }

@@ -1,13 +1,25 @@
 package com.main.today.controller;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.UUID;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.multipart.MultipartFile;
+
+import com.main.today.model.biz.Biz;
+import com.main.today.model.dto.TodayMember;
 
 @Controller
 public class TodayController {
 	
-//	@Autowired
-//	private Biz biz;
+	@Autowired
+	private Biz biz;
 	
 	@RequestMapping("/Login")
 	public String Login() {
@@ -49,13 +61,12 @@ public class TodayController {
 		return "BoardDayThema";
 	}
 	
-	
-//	@RequestMapping("/regist")
-//	public String regist(TodayMember dto) {
-//		int res = biz.insertRegist(dto);
-//		
-//		return "success";
-//	}
+
+	@RequestMapping("/checkId")
+	public String checkId(TodayMember dto) {
+		String res = biz.checkId(dto);
+		return res;
+	}
 //	
 //	@RequestMapping(value="/checkId", method=RequestMethod.POST)
 //	@ResponseBody

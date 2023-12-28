@@ -391,10 +391,11 @@
               </h6>
               <div class="contents-form-group">
                 <div class="inputset inputset-round">
-                  <input type="text" class="inputset-input form-control" aria-label="내용" placeholder="아이디를 입력하세요" name="userid" required/>
+                  <input type="text" class="inputset-input form-control" aria-label="내용" placeholder="아이디를 입력하세요" name="userid">
                 </div>
-                <button class="btnset btnset-round" type="buton">중복확인</button>
+                <button class="btnset btnset-round" type="buton" onclick="idcheck();">중복확인</button>
               </div>
+              <span id="olmessage"></span>
             </div>
             <div class="form-wrap">
               <h6 class="form-tit">비밀번호 <span>*</span>
@@ -710,6 +711,29 @@
                document.getElementById("sample6_detailAddress").focus();
            }
        }).open();
-   }
+   }  
+   
+   
+	function idcheck (){
+		let loginVal = { "userid": userid };	
+		
+        $.ajax({
+            type: "POST",
+            url: "/checkId", 
+            data: JSON.stringify(loginVal),
+            contentType: "application/json",
+            dataType: "json",
+            success: function (msg) {
+                if (msg.check == true) {
+                    alert("사용 가능한 아이디입니다.");
+                } else {
+                    alert("사용 불가능한 아이디입니다.");
+                }
+            },
+            error: function () {
+                alert("서버 오류가 발생했습니다.");
+            }
+        });
+    }
   </script>
 </body>

@@ -7,10 +7,12 @@ import com.main.today.model.dto.TodayMember;
 
 @org.apache.ibatis.annotations.Mapper
 public interface Mapper {
-//
-//	@Insert(" INSERT INTO TODAYMEMBER VALUES(NULL, #{m_id}, #{m_pw}, #{m_name}, #{m_height}, #{m_weight}) ")
-//	public int insertRegist(TodayMember dto);
-//	
-//	@Select(" SELECT * FROM TODAYMEMBER WHERE M_ID = #{m_id} ")
-//	public TodayMember checkId(TodayMember dto);
+
+	
+	@Insert(" INSERT INTO ENJOINGJEJU_USER VALUES (#{user_id}, '#{user_pw}', '#{user_pw_detail}', '#{user_name}', '#{user_email}', '#{user_email_detail}', '#{user_post_code}', '#{user_addr}', '#{user_detail_addr}', '#{user_extr_aaddr}' )")
+			public String insertUser(TodayMember dto);
+
+	@Select(" SELECT * FROM ENJOINGJEJU_USER WHERE user_id = #{user_id}")
+			public String checkId(TodayMember dto);
+			
 }

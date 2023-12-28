@@ -4,6 +4,5 @@ import com.main.today.model.dto.TodayMember;
 
 public interface Biz {
 
-//	public int insertRegist(TodayMember dto);
-//	public TodayMember checkId(TodayMember dto);
+	public String checkId(TodayMember dto);
 }
