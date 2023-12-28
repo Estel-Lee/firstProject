@@ -160,9 +160,8 @@ button,
 select,
 optgroup,
 textarea { margin: 0; font-family: inherit; font-size: inherit; line-height: inherit; }
-button,
-select { text-transform: none; }
-[role="button"] { cursor: pointer; }
+
+
 select { word-wrap: normal; }
 select:disabled { opacity: 1; }
 [list]:not([type="date"]):not([type="datetime-local"]):not([type="month"]):not([type="week"]):not([type="time"])::-webkit-calendar-picker-indicator { display: none !important; }
@@ -439,7 +438,7 @@ progress { vertical-align: baseline; }
 .cardset-wrap { display: flex; } 
 .cardset { position: relative; } 
 .cardset .cardset-figure { width: 100%; height: 40rem; margin-bottom: 0; } 
-.cardset .cardset-img { width: 100%; height: 100%; object-fit: cover; } 
+.cardset .cardset-img { position: relative; top: 10px; left: 20px; width: 100%; height: 100%; object-fit: cover; } 
 .cardset .cardset-tit { font-size: var(--fs-h6); line-height: var(--lh-h6); font-weight: 600; } 
 .cardset .cardset-tit + .cardset-desc { margin-top: 1.2rem; } 
 .cardset .cardset-tit + .cardset-txt { margin-top: 1.2rem; } 
@@ -475,6 +474,8 @@ progress { vertical-align: baseline; }
  .cardset.cardset-hor.row-rever { flex-direction: column; } 
  .cardset.cardset-hor.col-rever { flex-direction: column; } 
  }
+ 
+
 /* Card : Cardset User */
 .cardset.cardset-user::after { content: ''; position: absolute; top: 6.8rem; left: 0; width: 100%; height: calc(100% - 6.8rem); background-color: var(--bg-color); } 
 .cardset.cardset-user .cardset-figure { position: relative; width: 14rem; height: 14rem; margin: 0 auto; border-radius: 50%; overflow: hidden; z-index: 2; } 

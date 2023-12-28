@@ -52,7 +52,7 @@
 .glamping-N1 .fullmenu-subitem+.fullmenu-subitem { padding-top: 0.8rem; }
 .glamping-N1 .fullmenu-subitem:hover .fullmenu-sublink { color: var(--text-color5); }
 .glamping-N1 .fullmenu-sublink { font-size: var(--fs-p2); font-weight: 400; color: #a2a2a2; }
-.glamping-N1 .fullmenu-close { position: fixed; right: 8rem; top: 2.4rem; width: 3.2rem; height: 3.2rem; background-color: transparent; border: none; }
+.glamping-N1 .fullmenu-close { position: fixed; right: 8rem; top: 2.4rem; width: 3.2rem; height: 3.2rem; background-color: transparent; border: #ccc; }
 .glamping-N1 .fullmenu-close img { width: 100%; height: 100%; object-fit: contain; }
 @media (max-width: 1200px) {
  .glamping-N1 .header-container { padding: 0 2.4rem; }
@@ -129,7 +129,7 @@
 
 /* glamping-N3 [gzlq616R66] */
 .glamping-N3 { overflow: hidden; }
-.glamping-N3 .footer-container { position: relative; height: 65rem; }
+.glamping-N3 .footer-container { position: relative; height: 10rem; }
 .glamping-N3 .footer-backimg { width: calc(100% + 64rem); height: 100%; margin-left: -32rem; object-fit: cover; }
 .glamping-N3 .footer-body { position: absolute; top: 50%; left: 50%; width: 100%; transform: translate(-50%, -50%); padding: 0 2.4rem; }
 .glamping-N3 .footer-logo { text-align: center; }
