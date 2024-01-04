@@ -75,6 +75,13 @@
             margin-bottom: 20px;
         }
 
+        .divider {
+            border-top: 1px solid #ccc; /* 회색 실선 추가 */
+            margin: 20px 0; /* 상단과 하단 여백 조절 */
+            margin-top: 1px; /* 수정: 실선을 아래로 내리려면 값을 조절하세요. */
+            padding-bottom: 20px;
+        }
+        
         .cardset-group .cardset-xl {
             flex-basis: 100%;
         }
@@ -92,87 +99,53 @@
 </head>
 <body>
 
-    <main class="th-layout-main">
+    <main class="th-layout-main" style="margin-top: 100px;">
         <div class="glamping-N5" data-bid="bPLQ5vFHy3">
             <div class="contents-inner">
                 <div class="contents-container container-md">
                     <div class="cardset-wrap">
-                        <!-- 새로운 부분 시작 -->
-                        <div style="display:flex;">
-                        	<div style="flex-basis: 100%;">
-                        		<div>
-                        			<h1 style="margin-bottom: 20px;">지역별 추천</h1>
-                        			<span style="border-bottom-style: groove;">원하는 지역에 있는 카페를 소개합니다.</span>
-                        		</div>
-                        		<figure style="margin-top: 50px;">
-                        			<img src="/images/jido.jpg" style="width:350px; height:150px;">
-                        		</figure>
-                        	</div>
-                        	<div style="flex-basis: 100%;">
-                        		<div>
-                        			<h1 style="margin-bottom: 20px;">날짜 검색</h1>
-                        			<span style="border-bottom-style: groove;">날씨를 선택하여 날씨에 맞는 카페를 추천합니다.</span>
-                        		</div>
-                        		<div style="display:flex; justify-content: space-around;">
-                        		<figure style="margin-top: 50px;">
-                        			<img src="/images/jido.jpg" style="width:150px; height:150px;">
-                        		</figure>
-                        		<figure style="margin-top: 50px;">
-                        			<img src="/images/jido.jpg" style="width:150px; height:150px;">
-                        		</figure>
-                        		<figure style="margin-top: 50px;">
-                        			<img src="/images/jido.jpg" style="width:150px; height:150px;">
-                        		</figure>
-                        		</div>
-                        	</div>
-                        </div>
-<!--                         <div class="cardset-group"> -->
-<!--                             <div class="cardset cardset-xl cardset-deco cardset-hor" style="flex-basis:0%; align-items:baseline";> -->
-<!--                                 <div class="cardset-body"> -->
-<!--                                     <h2 class="cardset-tit">지역별 추천</h2> -->
-<!--                                 </div> -->
-<!--                                 <figure class="cardset-figure"> -->
-<!--                                     <img class="cardset-img" src="/images/jido.jpg" alt="카드이미지"> -->
-<!--                                 </figure> -->
-<!--                             </div> -->
-<!--                             <div class="cardset cardset-xl cardset-deco cardset-hor"> -->
-<!--                                 <figure class="cardset-figure"> -->
-<!--                                     <img class="cardset-img" src="/images/img_glamping_N5_2.png" alt="카드이미지"> -->
-<!--                                 </figure> -->
-<!--                                 <div class="cardset-body"> -->
-<!--                                     <h2 class="cardset-tit">오오 검색</h2> -->
-<!--                                 </div> -->
-<!--                             </div> -->
-<!--                         </div> -->
-<!--                             <div class="cardset cardset-xl cardset-deco cardset-hor"> -->
-<!--                                 <figure class="cardset-figure"> -->
-<!--                                     <img class="cardset-img" src="/images/img_glamping_N5_2.png" alt="카드이미지"> -->
-<!--                                 </figure> -->
-<!--                                 <div class="cardset-body"> -->
-<!--                                     <h2 class="cardset-tit">날짜 검색</h2> -->
-<!--                                 </div> -->
-<!--                             </div> -->
-<!--                         </div> -->
+                      <div style="display:flex; border-bottom: 2px solid #ccc; padding-bottom: 20px;">
+    
+    
+    <!-- 첫 번째 섹션: 지역별 추천 -->
+    <div style="flex-basis: 100%;">
+        <div>
+            <h1 style="margin-bottom: 20px;">지역별 추천</h1>
+            <span style="border-bottom: 1px solid; border-bottom-style: dashed;">원하는 지역에 있는 카페를 소개합니다.</span>
+        </div>
+        <figure style="margin-top: 50px;">
+            <img src="/images/jido.jpg" style="width:350px; height:150px;">
+        </figure>
+    </div>
 
-<!--                         <div class="cardset-group"> -->
-<!--                             <div class="cardset cardset-xl cardset-deco cardset-hor row-rever"> -->
-<!--                                 <figure class="cardset-figure"> -->
-<!--                                     <img class="cardset-img" src="/images/jido.jpg" alt="카드이미지"> -->
-<!--                                 </figure> -->
-<!--                                 <li></li> -->
-<!--                                 <figure class="cardset-figure"> -->
-<!--                                     <img class="cardset-img" src="/images/jido.jpg" alt="카드이미지"> -->
-<!--                                 </figure> -->
-<!--                                 <div class="cardset-body"> -->
-<!--                                     <h2 class="cardset-tit">추천 테마</h2> -->
-<!--                                 </div> -->
-<!--                             </div> -->
-<!--                         </div> -->
+
+    <!-- 두 번째 섹션: 날짜 검색 -->
+    <div style="flex-basis: 100%;">
+        <div>
+            <h1 style="margin-bottom: 20px;">날짜 검색</h1>
+            <span style="border-bottom: 1px solid; border-bottom-style: dashed;">날씨를 선택하여 날씨에 맞는 카페를 추천합니다.</span>
+        </div>
+        <div style="display:flex; justify-content: space-around;">
+            <figure style="margin-top: 50px;">
+                <img src="/images/jido.jpg" style="width:150px; height:150px;">
+            </figure>
+            <figure style="margin-top: 50px;">
+                <img src="/images/jido.jpg" style="width:150px; height:150px;">
+            </figure>
+            <figure style="margin-top: 50px;">
+                <img src="/images/jido.jpg" style="width:150px; height:150px;">
+            </figure>
+        </div>
+    </div>
+</div>
+                      
+
 						<div style="display:flex;">
                         	<div style="flex-basis: 100%;">
                         		<div style="margin-top: 100px;">
                         			<h1 style="margin-bottom: 20px;">추천테마</h1>
-                        			<span style="border-bottom-style: groove;">원하는 지역에 있는 카페를 소개합니다.</span>
+                                    <span style="border-bottom: 1px solid; border-bottom-style: dashed;">원하는 지역에 있는 카페를 소개합니다.</span>
+                                                               		
                         		</div>
                         		<div style="display:flex; justify-content: space-around;">
                         		<figure style="margin-top: 50px;">
@@ -228,7 +201,7 @@
     <div class="glamping-N9" data-bid="leLq5vfhZ5">
       <div class="contents-inner">
         <div class="contents-container container-md">
-
+         <div class="divider"></div>
           <div class="textset">
             <h2 class="textset-tit">추천 후기</h2>
             <p class="textset-desc">실제 사용자들의 카페 후기에 대해서 소개합니다.</p>
