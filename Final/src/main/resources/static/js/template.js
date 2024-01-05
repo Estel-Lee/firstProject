@@ -207,17 +207,18 @@
   }  
 })();
 
-  function checkAll(){
-    if (!checkUserId(form.userid.value)) { 
-      return false; 
-    } else if (!checkPassword(form.userid.value, form.password.value, form.password2.value)) {
-      return false; 
-    } else if (!checkMail(form.useremail.value, form.useremail1.value)) {
-      return false; 
-    } else if (!checkName(form.username.value)) { 
-      return false; 
-    } return true;
-};
+ // 주소창을 눌렀을때 전부 공복으로 변하는 이슈때문에 주석처리함
+ // function checkAll(){
+ //   if (!checkUserId(form.userid.value)) { 
+ //     return false; 
+ //   } else if (!checkPassword(form.userid.value, form.password.value, form.password2.value)) {
+ //     return false; 
+ //  } else if (!checkMail(form.useremail.value, form.useremail1.value)) {
+ //     return false; 
+ //   } else if (!checkName(form.username.value)) { 
+ //     return false; 
+ //   } return true;
+// };
 
 function checkUserId(id){
   var idRegExp = /^[a-zA-z0-9]{4,12}$/;
@@ -260,7 +261,7 @@ function checkPassword(id, password, password2){
 }
 
 function checkMail(useremail, useremail1) {
-  var emailRegExp = /^[A-Za-z0-9_]+[A-Za-z0-9]*[@]{1}[A-Za-z0-9]+[A-Za-z0-9]*[.]{1}[A-Za-z]{1,3}$/;
+  var emailRegExp = /^[A-Za-z0-9_]+[A-Za-z0-9]{1}[A-Za-z0-9]+[A-Za-z0-9]{1}[A-Za-z]{1,3}$/;
   
   if (!emailRegExp.test(useremail, useremail1)) {
     alert("이메일 형식이 올바르지 않습니다!");
