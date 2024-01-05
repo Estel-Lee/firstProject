@@ -13,7 +13,7 @@ public class BizImpl implements Biz{
 	private Mapper mapper;
 
 	@Override
-	public String checkId(TodayMember dto) {
+	public int checkId(TodayMember dto) throws Exception {
 		return mapper.checkId(dto);
 	}
 

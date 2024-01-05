@@ -1,16 +1,10 @@
 package com.main.today.controller;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.UUID;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.main.today.model.biz.Biz;
 import com.main.today.model.dto.TodayMember;
@@ -61,13 +55,22 @@ public class TodayController {
 		return "BoardDayThema";
 	}
 	
+	@ResponseBody
+	@RequestMapping(value = "/checkId", method = RequestMethod.POST)
+    public String checkId(TodayMember id) throws Exception{
+		System.out.println("넘어오나요...");
+        int result = biz.checkId(id);
 
-	@RequestMapping("/checkId")
-	public String checkId(TodayMember dto) {
-		String res = biz.checkId(dto);
-		return res;
-	}
-//	
+		System.out.println("id값 === " + id.getUser_id());
+		
+        if(result == 1) {
+        	System.out.println(result + " =------- result값");
+        	return "1";
+        }
+        return "0";
+	} 
+	
+	
 //	@RequestMapping(value="/checkId", method=RequestMethod.POST)
 //	@ResponseBody
 //	public Map<String, Boolean> checkId(@RequestBody TodayMember dto){
@@ -75,7 +78,7 @@ public class TodayController {
 //		boolean check = false;
 //		Map<String, Boolean> map = new HashMap<>();
 //		
-//		TodayMember dto1 = biz.checkId(dto);
+//		String dto1 = biz.checkId(dto);
 //		
 //		if(dto1 == null) {
 //			check = true;

@@ -12,7 +12,8 @@ public interface Mapper {
 	@Insert(" INSERT INTO ENJOINGJEJU_USER VALUES (#{user_id}, '#{user_pw}', '#{user_pw_detail}', '#{user_name}', '#{user_email}', '#{user_email_detail}', '#{user_post_code}', '#{user_addr}', '#{user_detail_addr}', '#{user_extr_aaddr}' )")
 			public String insertUser(TodayMember dto);
 
-	@Select(" SELECT * FROM ENJOINGJEJU_USER WHERE user_id = #{user_id}")
-			public String checkId(TodayMember dto);
+	//id 중복 체크 
+	@Select(" SELECT COUNT(*) FROM ENJOINGJEJU_USER WHERE user_id = #{user_id}")
+			public int checkId(TodayMember dto);
 			
 }
