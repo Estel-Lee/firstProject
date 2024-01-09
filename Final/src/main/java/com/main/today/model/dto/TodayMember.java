@@ -7,30 +7,32 @@ public class TodayMember {
 	private String user_pw_detail; // 비밀번호 확인
 	private String user_name; // 유저 이름
 	private String user_email; //유저 이메일 예)korea
+	private String user_phone; //폰번호
 	private String user_email_detail; //유저 이메일 뒷부분 예)naver.com
 	private String user_post_code; //우편번호(자동입력)
 	private String user_addr; //주소(자동입력)
 	private String user_detail_addr; //상세주소(직접입력)
-	private String user_extr_aaddr; //자세한주소(자동입력)
+	private String user_extr_addr; //자세한주소(자동입력)
 	
 	public TodayMember() {
 		super();
 	}
 
 	public TodayMember(String user_id, String user_pw, String user_pw_detail, String user_name, String user_email,
-			String user_email_detail, String user_post_code, String user_addr, String user_detail_addr,
-			String user_extr_aaddr) {
+			String user_email_detail, String user_phone, String user_post_code, String user_addr, String user_detail_addr,
+			String user_extr_addr) {
 		super();
 		this.user_id = user_id;
 		this.user_pw = user_pw;
 		this.user_pw_detail = user_pw_detail;
 		this.user_name = user_name;
 		this.user_email = user_email;
+		this.user_phone = user_phone;
 		this.user_email_detail = user_email_detail;
 		this.user_post_code = user_post_code;
 		this.user_addr = user_addr;
 		this.user_detail_addr = user_detail_addr;
-		this.user_extr_aaddr = user_extr_aaddr;
+		this.user_extr_addr = user_extr_addr;
 	}
 
 	public String getUser_id() {
@@ -80,7 +82,15 @@ public class TodayMember {
 	public void setUser_email_detail(String user_email_detail) {
 		this.user_email_detail = user_email_detail;
 	}
+	
+	public String getUser_phone() {
+		return user_phone;
+	}
 
+	public void setUser_phone(String user_phone) {
+		this.user_phone = user_phone;
+	}
+	
 	public String getUser_post_code() {
 		return user_post_code;
 	}
@@ -106,12 +116,10 @@ public class TodayMember {
 	}
 
 	public String getUser_extr_aaddr() {
-		return user_extr_aaddr;
+		return user_extr_addr;
 	}
 
 	public void setUser_extr_aaddr(String user_extr_aaddr) {
-		this.user_extr_aaddr = user_extr_aaddr;
-	}
-
-	
+		this.user_extr_addr = user_extr_aaddr;
+	}	
 }

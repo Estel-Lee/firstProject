@@ -1,7 +1,13 @@
 package com.main.today.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -67,12 +73,29 @@ public class TodayController {
 	//ID 중복체크
 	@ResponseBody
 	@RequestMapping(value = "/checkId", method = RequestMethod.POST)
-    public String checkId(TodayMember id) throws Exception{
-        int result = biz.checkId(id);
+    public String checkId(TodayMember dto) throws Exception{
+		System.out.println("ID중복체크 진입");
+        int result = biz.checkId(dto);
         if(result == 1) {
         	return "1";
         }
         return "0";
 	} 
 
+//	//회원가입
+//	@RequestMapping(value = "/UserSuccess", method=RequestMethod.POST)
+//	public Map<String, Boolean> UserSuccess(TodayMember dto) throws Exception{
+//		System.out.println("진입!");
+//
+//		int result = biz.insertUser(dto);
+//
+//		Map<String, Boolean> map = new HashMap<>();
+//		System.out.println("값 ==== " + biz.insertUser(dto));
+//        if(result > 0 ) {
+//        	map.put("msg", true);
+//        }else {
+//        	map.put("msg", false);
+//        }
+//		return map;
+//	}
 }

@@ -8,9 +8,9 @@ import com.main.today.model.dto.TodayMember;
 @org.apache.ibatis.annotations.Mapper
 public interface Mapper {
 
-	
-	@Insert(" INSERT INTO ENJOINGJEJU_USER VALUES (#{user_id}, '#{user_pw}', '#{user_pw_detail}', '#{user_name}', '#{user_email}', '#{user_email_detail}', '#{user_post_code}', '#{user_addr}', '#{user_detail_addr}', '#{user_extr_aaddr}' )")
-			public String insertUser(TodayMember dto);
+	//회원가입
+	@Insert(" INSERT INTO ENJOINGJEJU_USER VALUES (#{user_id}, #{user_pw}, #{user_pw_detail}, #{user_name}, #{user_email}, #{user_email_detail}, #{user_phone}, #{user_post_code}, #{user_addr}, #{user_detail_addr}, #{user_extr_addr} )")
+			public int insertUser(TodayMember dto);
 
 	//id 중복 체크 
 	@Select(" SELECT COUNT(*) FROM ENJOINGJEJU_USER WHERE user_id = #{user_id}")
