@@ -82,20 +82,16 @@ public class TodayController {
         return "0";
 	} 
 
-//	//회원가입
-//	@RequestMapping(value = "/UserSuccess", method=RequestMethod.POST)
-//	public Map<String, Boolean> UserSuccess(TodayMember dto) throws Exception{
-//		System.out.println("진입!");
-//
-//		int result = biz.insertUser(dto);
-//
-//		Map<String, Boolean> map = new HashMap<>();
-//		System.out.println("값 ==== " + biz.insertUser(dto));
-//        if(result > 0 ) {
-//        	map.put("msg", true);
-//        }else {
-//        	map.put("msg", false);
-//        }
-//		return map;
-//	}
+	//회원가입
+	@RequestMapping(value = "/UserSuccess", method=RequestMethod.POST)
+	public Map<String, Boolean> UserSuccess(TodayMember dto) throws Exception{
+		int result = biz.insertUser(dto);
+		Map<String, Boolean> map = new HashMap<>();
+        if(result > 0 ) {
+        	map.put("msg", true);
+        }else {
+        	map.put("msg", false);
+        }
+		return map;
+	}
 }

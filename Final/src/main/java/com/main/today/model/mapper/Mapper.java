@@ -9,7 +9,7 @@ import com.main.today.model.dto.TodayMember;
 public interface Mapper {
 
 	//회원가입
-	@Insert(" INSERT INTO ENJOINGJEJU_USER VALUES (#{user_id}, #{user_pw}, #{user_pw_detail}, #{user_name}, #{user_email}, #{user_email_detail}, #{user_phone}, #{user_post_code}, #{user_addr}, #{user_detail_addr}, #{user_extr_addr} )")
+	@Insert(" INSERT INTO ENJOINGJEJU_USER VALUES (0, #{user_id}, #{user_pw}, #{user_pw_detail}, #{user_name}, #{user_email}, #{user_email_detail}, #{user_phone}, #{user_post_code}, #{user_addr}, #{user_detail_addr}, #{user_extr_addr} )")
 			public int insertUser(TodayMember dto);
 
 	//id 중복 체크 

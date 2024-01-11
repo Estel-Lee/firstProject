@@ -16,5 +16,10 @@ public class BizImpl implements Biz{
 	public int checkId(TodayMember dto) throws Exception {
 		return mapper.checkId(dto);
 	}
-
+	
+	@Override
+	public int insertUser(TodayMember dto) throws Exception {
+		return mapper.insertUser(dto);
+	}
+	
 }

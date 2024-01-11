@@ -115,11 +115,11 @@ public class TodayMember {
 		this.user_detail_addr = user_detail_addr;
 	}
 
-	public String getUser_extr_aaddr() {
+	public String getUser_extr_addr() {
 		return user_extr_addr;
 	}
 
-	public void setUser_extr_aaddr(String user_extr_aaddr) {
-		this.user_extr_addr = user_extr_aaddr;
+	public void setUser_extr_addr(String user_extr_addr) {
+		this.user_extr_addr = user_extr_addr;
 	}	
 }
